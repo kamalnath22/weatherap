@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Main Container */
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 350px;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+}
+
+/* Search Section */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search input {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+}
+
+.search button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #00acc1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.search button:hover {
+    background-color: #00838f;
+    transform: scale(1.05);
+}
+
+/* Weather Result Styling */
+.weather-result {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+    display: none;
+    transition: all 0.5s;
+}
+
+.weather-result h2 {
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.description {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.details div {
+    flex: 1;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    border-radius: 10px;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff5f5f;
+    margin-top: 15px;
+    font-size: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .search input {
+        width: 60%;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Temperature Styling */
+.temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensure elements wrap if too wide */
+    text-align: center; /* Center the temperature text */
+    word-break: break-word; /* Handle long text properly */
+}
+
